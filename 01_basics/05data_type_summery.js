@@ -38,3 +38,21 @@ const heroes=["Tony","Steve","loki"];
  }
 */
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ******Stack(Primitive) and Heap(Non Primitive)*******
+let boss="Ankush"
+let any=boss
+any="dumb"
+console.log(any);
+console.log(boss);
+// In case of primitive it give a reference of a copy instead of a original that's why changes doesn't occur in original
+let userone={
+    Name:"Ankush",
+    rollno:7
+} 
+let userTwo=userone
+userTwo.rollno=1
+console.log(userTwo.rollno);
+console.log(userone.rollno);
+// In case of non primitive it give the reference of   original that's why changes  occur in original
