@@ -45,7 +45,28 @@ const user=[
 // console.log(Object.entries(tinderuser))
 
 
- console.log(tinderuser.hasOwnProperty("isloggedin"))
+//  console.log(tinderuser.hasOwnProperty("isloggedin"))
+
+
+// **********Object destructure and Json API**********
+const Course={
+    Name:"Java Script Tutorial",
+    price:"Free",
+    Instructor:"Hitesh Sir"
+}
+// console.log(Course.Instructor)
+const {Instructor:teacher}=Course
+// console.log(Instructor)
+console.log(teacher);
+// if we write object like this then it will a json
+// {
+//     "Name":"Java Script Tutorial",
+//     "price":"Free",
+//     "Instructor":"Hitesh Sir"
+
+// }
+// aage hum iss json ki variable m store kra k usse object ki trah acess kr sakte h
+
 
 
 
