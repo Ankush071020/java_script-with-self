@@ -1,0 +1,66 @@
+// the whole program act as an global scope
+const a=1
+var b=5
+let c=4
+// inside the {} is local scope
+if(true){
+    const a=70
+    var b=80
+    let c=60
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+    
+}
+    //  console.log(a);
+    // console.log(b);
+    // console.log(c);
+    // That's why we don't use var as a variable because it doesnot follow scopes
+
+
+
+    // *********Nesting of scope********
+function one(){
+    const username="jangra"
+    function two(){
+        const id="best"
+        // console.log(username);
+        
+    }
+    // console.log(id);
+    
+    two()
+}
+one()
+
+if(true){
+    const username="Ankush"
+    if (username=="Ankush") {
+        const website=" Github"
+        // console.log(username+website);
+        
+    }
+    // console.log(website);
+    
+}
+// console.log(username);
+
+
+
+console.log(without_variable(4))//it gives me the same value when I print this below
+function without_variable(num1) {
+    return num1+2
+}
+// console.log(without_variable(4))
+
+
+
+
+
+console.log(score(4))//In this it give me a error
+const score= function with_variable(num2) {
+    return num2+1
+}
+// console.log(score(4))
+
+
