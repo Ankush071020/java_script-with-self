@@ -21,7 +21,7 @@
 				"esbenp.prettier-vscode",
 				"vscode-icons-team.vscode-icons",
 				"wayou.vscode-todo-highlight",
-				"code-runner.jun-hun"
+			    "formulahendry.code-runner"
 			],
 			"settings": {
 				"editor.fontSize": 32,
