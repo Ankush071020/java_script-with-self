@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+    
+</head>
+<style>
+   .bg{
+    background-color: #242424;
+    color: seagreen;
+   } 
+</style>
+
+<body class="bg">
+    <h1>Amazing Images</h1>
+    <div class="container">
+        <ul class="images">
+          <li><img id="01" width="150px" src="https://images.pexels.com/photos/28455224/pexels-photo-28455224/free-photo-of-stylish-woman-in-denim-bucket-hat-fashion-portrait.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+          <li><img id="02" width="150px" src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+          <li><img id="03" width="150px" src="https://images.pexels.com/photos/101667/pexels-photo-101667.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+          <li><img id="04" width="150px" src="https://images.pexels.com/photos/4668553/pexels-photo-4668553.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+          <li><img id="05" width="150px" src="https://images.pexels.com/photos/3811131/pexels-photo-3811131.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+          
+          <li><a style="color: aliceblue;" id="06" href="">GOOGLE INDIA</a></li>
+        </ul>
+        <script>
+            // document.getElementById('02').onclick=function(){
+            //     alert("Empty road ")
+            // }
+            // attachEvent()
+            // jQuery-on
+
+            
+            // type,timestamp,defaultPrevented
+            // target,toElement,srcElement,currentTarget,
+            // clientX,clientY,screenX,screenY
+            // altkey,ctrlkey,shiftkey,keycode
+            // document.getElementById("02").addEventListener("click",(e)=>{
+            //     // alert('Empty road again')
+            //     console.log(e)
+            // })
+
+
+
+            // document.querySelector(".images").addEventListener("click",(e)=>{
+            //     console.log("clicked inside the ul")
+            // }, false)
+            // document.getElementById("04").addEventListener("click",(e)=>{
+            //     console.log("clicked on the beauty")
+            //     // e.stopPropagation() it stop the propagation after this
+            // }, false)
+
+            // There are two modes of propagation one is bubbling mode (if false)and another is capturing mode(if true) by default it is false
+
+            // document.getElementById("06").addEventListener("click",(e)=>{
+            //     e.preventDefault()
+            //     e.stopPropagation()
+            // })
+
+            // if i click a photo then it will be disappper
+            document.querySelector('.images').addEventListener("click",(e)=>{
+                if(e.target.tagName==="IMG"){
+                    let removeit= e.target.parentNode
+                    
+                removeit.remove()
+                removeit.parentNode.removeChild(removeit)
+                }
+
+            })
+        </script>
+
+    </div>
+    
+</body>
+</html>
